@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": "usr_b72fac46-d77a-4fbf-9cec-7e6f58dcb11c",
+      "name": "Administrador Via Fácil",
+      "email": "admin@viafacil.com",
+      "phone": "(00) 90000-0000",
+      "role": "admin",
+      "rating": 5,
+      "verified": true,
+      "salt": "90528143b23242361459970f06541f87",
+      "passwordHash": "afe2ba7e43dc02867e4b35fa44eff84d0257bdaa266d627a1f3093f330619a030d78c801e5d1c63417184eefaa419404ee3f98c717e784ba75a86249cd384a11",
+      "createdAt": "2026-07-31T21:43:18.483Z"
+    },
+    {
+      "id": "usr_2546bed6-9e35-40cc-be01-6f8d56efb397",
+      "name": "Carlos Motorista",
+      "email": "motorista@viafacil.com",
+      "phone": "(00) 98888-0000",
+      "role": "driver",
+      "rating": 4.9,
+      "verified": true,
+      "vehicle": "Chevrolet Onix • ABC1D23",
+      "salt": "c4a2b1971331d5144a7f07aa33e064db",
+      "passwordHash": "5273d03cc250c441f22dd64eebcc6643436c1b2bc237691f695a3da431f4ebbf22d9a3c3a6461745c8812008a252d43e441658127657a70dda2dd0d45536f1f5",
+      "createdAt": "2026-07-31T21:43:18.483Z"
+    }
+  ],
+  "rides": [
+    {
+      "id": "ride_15702ce0-fb2d-4126-9e65-68b8718e493d",
+      "driverId": "usr_2546bed6-9e35-40cc-be01-6f8d56efb397",
+      "origin": "Centro",
+      "destination": "Aeroporto",
+      "date": "2026-08-01",
+      "time": "08:00",
+      "seats": 3,
+      "availableSeats": 3,
+      "price": 28,
+      "vehicle": "Chevrolet Onix",
+      "notes": "Uma parada rápida no caminho.",
+      "status": "active",
+      "createdAt": "2026-07-31T21:43:18.483Z"
+    },
+    {
+      "id": "ride_0c1bff2b-04bc-4938-90d7-b71c14d142ac",
+      "driverId": "usr_2546bed6-9e35-40cc-be01-6f8d56efb397",
+      "origin": "Rodoviária",
+      "destination": "Centro",
+      "date": "2026-08-02",
+      "time": "17:30",
+      "seats": 4,
+      "availableSeats": 4,
+      "price": 18,
+      "vehicle": "Chevrolet Onix",
+      "notes": "Bagagem pequena permitida.",
+      "status": "active",
+      "createdAt": "2026-07-31T21:43:18.483Z"
+    }
+  ],
+  "bookings": [],
+  "deliveries": [],
+  "messages": [],
+  "reviews": []
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071b3a" />
+  <title>VIA FÁCIL | Caronas & Entregas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><img src="/assets/logo.png" alt="VIA FÁCIL" /></a>
+    <nav id="nav">
+      <a href="#buscar">Buscar carona</a><a href="#publicar">Publicar</a><a href="#entregas">Entregas</a><a href="#minha-area">Minha área</a>
+    </nav>
+    <div class="auth-actions"><span id="user-badge" hidden></span><button class="ghost" id="auth-button">Entrar</button><button class="icon-button" id="menu-button" aria-label="Menu">☰</button></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">MOBILIDADE QUE CONECTA</span>
+        <h1>Seu caminho e suas entregas, <em>mais fáceis.</em></h1>
+        <p>Encontre uma carona, publique uma viagem ou envie uma encomenda com segurança e praticidade.</p>
+        <div class="hero-actions"><a class="button primary" href="#buscar">Encontrar carona</a><a class="button secondary" href="#entregas">Solicitar entrega</a></div>
+        <div class="trust-row"><span>✓ Perfis verificados</span><span>✓ Reservas rápidas</span><span>✓ Atendimento próximo</span></div>
+      </div>
+      <div class="hero-card">
+        <div class="route-map"><div class="pin start"></div><div class="route-line"></div><div class="pin finish"></div></div>
+        <strong>Próxima viagem</strong><h3>Centro → Aeroporto</h3><div class="trip-meta"><span>Amanhã • 08:00</span><span>R$ 28</span></div>
+      </div>
+    </section>
+
+    <section class="search-section" id="buscar">
+      <div class="section-heading"><span class="eyebrow">CARONAS DISPONÍVEIS</span><h2>Onde você quer chegar?</h2></div>
+      <form id="search-form" class="search-card">
+        <label>Origem<input name="origin" placeholder="Ex.: Centro" /></label>
+        <label>Destino<input name="destination" placeholder="Ex.: Aeroporto" /></label>
+        <label>Data<input type="date" name="date" /></label>
+        <button class="button primary" type="submit">Buscar</button>
+      </form>
+      <div id="rides-list" class="cards-grid"></div>
+    </section>
+
+    <section class="split-section" id="publicar">
+      <div><span class="eyebrow">PARA MOTORISTAS</span><h2>Tem lugares livres? Compartilhe a viagem.</h2><p>Publique a rota, escolha o preço e ajude outras pessoas a chegarem ao destino.</p><ul><li>Controle de vagas em tempo real</li><li>Contato com os passageiros</li><li>Histórico de viagens e reservas</li></ul></div>
+      <form id="ride-form" class="form-card">
+        <h3>Publicar carona</h3>
+        <div class="form-grid"><label>Origem<input required name="origin" /></label><label>Destino<input required name="destination" /></label><label>Data<input required type="date" name="date" /></label><label>Horário<input required type="time" name="time" /></label><label>Vagas<input required type="number" min="1" max="8" value="3" name="seats" /></label><label>Preço por pessoa<input required type="number" min="0" step="0.01" name="price" /></label></div>
+        <label>Veículo<input name="vehicle" placeholder="Ex.: Onix branco" /></label><label>Observações<textarea name="notes" rows="3"></textarea></label>
+        <button class="button primary full" type="submit">Publicar carona</button>
+      </form>
+    </section>
+
+    <section class="delivery-section" id="entregas">
+      <div class="section-heading light"><span class="eyebrow">ENTREGAS</span><h2>Da coleta ao destino, sem complicação.</h2></div>
+      <form id="delivery-form" class="form-card delivery-card">
+        <div class="form-grid"><label>Local de coleta<input required name="pickup" /></label><label>Local de entrega<input required name="destination" /></label><label>Data<input required type="date" name="date" /></label><label>Horário<input required type="time" name="time" /></label><label>Tipo da encomenda<select required name="packageType"><option value="">Selecione</option><option>Documento</option><option>Caixa pequena</option><option>Alimento</option><option>Outro</option></select></label><label>Destinatário<input required name="recipient" /></label><label>Telefone<input name="phone" /></label><label>Observações<input name="notes" /></label></div>
+        <button class="button primary full" type="submit">Solicitar entrega</button>
+      </form>
+    </section>
+
+    <section class="dashboard-section" id="minha-area">
+      <div class="section-heading"><span class="eyebrow">MINHA ÁREA</span><h2>Acompanhe tudo em um só lugar.</h2></div>
+      <div id="login-reminder" class="empty-state">Entre na sua conta para visualizar reservas e entregas.</div>
+      <div id="dashboard" hidden><div class="tabs"><button class="tab active" data-tab="bookings">Minhas reservas</button><button class="tab" data-tab="deliveries">Minhas entregas</button><button class="tab admin-tab" data-tab="admin" hidden>Administração</button></div><div id="tab-content"></div></div>
+    </section>
+  </main>
+
+  <footer><img src="/assets/logo.png" alt="VIA FÁCIL" /><p>Caronas e entregas com mais segurança, economia e proximidade.</p><small>© 2026 VIA FÁCIL. MVP demonstrativo.</small></footer>
+
+  <dialog id="auth-dialog"><form method="dialog" class="modal"><button class="close" value="cancel">×</button><div class="tabs auth-tabs"><button type="button" class="tab active" data-auth="login">Entrar</button><button type="button" class="tab" data-auth="register">Criar conta</button></div><form id="login-form"></form><div id="auth-content"></div></form></dialog>
+  <dialog id="booking-dialog"><form method="dialog" class="modal"><button class="close" value="cancel">×</button><div id="booking-content"></div></form></dialog>
+  <div id="toast" class="toast"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
