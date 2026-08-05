@@ -50,4 +50,6 @@ async function serve(req,res,url){let pathname=decodeURIComponent(url.pathname);
 
 await seed();
 const server=http.createServer(async(req,res)=>{try{const url=new URL(req.url,`http://${req.headers.host||'127.0.0.1'}`);if(url.pathname.startsWith('/api/'))await api(req,res,url);else await serve(req,res,url);}catch(err){console.error(err);json(res,500,{error:'Erro interno do servidor.'});}});
-server.listen(PORT,'127.0.0.1',()=>console.log(`\nVIA FÁCIL disponível em http://127.0.0.1:${PORT}\n`));
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`\nVIA FÁCIL disponível na porta ${PORT}\n`);
+});
