@@ -77,8 +77,8 @@
 
   <footer><img src="/assets/logo.png" alt="VIA FÁCIL" /><p>Caronas e entregas com mais segurança, economia e proximidade.</p><small>© 2026 VIA FÁCIL. MVP demonstrativo.</small></footer>
 
-  <dialog id="auth-dialog"><form method="dialog" class="modal"><button class="close" value="cancel">×</button><div class="tabs auth-tabs"><button type="button" class="tab active" data-auth="login">Entrar</button><button type="button" class="tab" data-auth="register">Criar conta</button></div><form id="login-form"></form><div id="auth-content"></div></form></dialog>
-  <dialog id="booking-dialog"><form method="dialog" class="modal"><button class="close" value="cancel">×</button><div id="booking-content"></div></form></dialog>
+  <dialog id="auth-dialog"><div class="modal"><button class="close" type="button" data-close-auth>×</button><div class="tabs auth-tabs"><button type="button" class="tab active" data-auth="login">Entrar</button><button type="button" class="tab" data-auth="register">Criar conta</button></div><div id="auth-content"></div></div></dialog>
+  <dialog id="booking-dialog"><div class="modal"><button class="close" type="button" data-close-booking>×</button><div id="booking-content"></div></div></dialog>
   <dialog id="chat-dialog"><div class="modal"><button class="close" type="button" data-close-chat>×</button><div id="chat-content"></div></div></dialog>
   <div id="toast" class="toast"></div>
   <script type="module" src="/app.js"></script>
