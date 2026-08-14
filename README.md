@@ -1,6 +1,6 @@
 # VIA FÁCIL — Caronas & Entregas
 
-MVP funcional com frontend responsivo e API Node.js. Os dados ficam em `data/db.json`, sem necessidade de instalar PostgreSQL nesta primeira entrega.
+Aplicação responsiva com API Node.js e persistência PostgreSQL em produção. Sem `DATABASE_URL`, o desenvolvimento local continua usando `data/db.json`.
 
 ## Requisitos
 
@@ -51,6 +51,19 @@ Motorista:
 - Identidade visual oficial da VIA FÁCIL
 - Layout responsivo
 
+## Configuração de produção no Render
+
+Crie um PostgreSQL no mesmo workspace e região do serviço web. No serviço `via-facil`, configure:
+
+- `NODE_ENV=production`
+- `DATABASE_URL`: Internal Database URL fornecida pelo PostgreSQL do Render
+- `JWT_SECRET`: valor aleatório longo e exclusivo
+- `ADMIN_EMAIL`: e-mail inicial do administrador
+- `ADMIN_PASSWORD`: senha inicial forte, com pelo menos 8 caracteres
+- `ADMIN_NAME`: nome do administrador (opcional)
+
+Na primeira inicialização, a aplicação cria a tabela necessária e cadastra o administrador definido pelas variáveis. As contas demonstrativas só são criadas no desenvolvimento local.
+
 ## Observação
 
-Esta entrega é um MVP local. Antes de publicar para clientes reais, altere `JWT_SECRET`, migre os dados para PostgreSQL, adicione recuperação de senha, pagamentos, mapas, notificações e políticas de privacidade.
+Antes de abrir o serviço ao público, adicione recuperação de senha, confirmação de e-mail/telefone, pagamentos, mapas, notificações, backups e políticas de privacidade/LGPD.
