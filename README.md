@@ -40,9 +40,12 @@ Motorista:
 ## Funcionalidades
 
 - Cadastro e login com JWT
-- Busca e publicação de caronas
-- Reserva e cancelamento com controle de vagas
-- Solicitação e rastreamento de entregas
+- Busca e publicação de percursos com paradas intermediárias
+- Conversa entre passageiro e motorista antes da reserva
+- Solicitação de reserva por trecho, com aceite ou recusa do motorista
+- Controle de vagas após confirmação e cancelamento
+- Publicação combinada para passageiros, entregas ou ambos
+- Solicitação de entrega entre quaisquer pontos válidos do percurso
 - Histórico do usuário
 - Painel administrativo com indicadores
 - Identidade visual oficial da VIA FÁCIL
