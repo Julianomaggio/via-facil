@@ -52,6 +52,7 @@ Motorista:
 - Layout responsivo
 - Mapa interativo dos percursos
 - Busca de endereços, cálculo de rota, distância e duração estimada
+- Seleção explícita de cidade e estado quando existem locais com o mesmo nome
 
 ## Configuração de produção no Render
 
