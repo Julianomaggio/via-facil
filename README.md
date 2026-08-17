@@ -27,16 +27,6 @@ http://127.0.0.1:5173
 
 Não use o botão **Go Live**. O próprio Node serve o site e a API.
 
-## Contas de demonstração
-
-Administrador:
-- E-mail: `admin@viafacil.com`
-- Senha: `admin123`
-
-Motorista:
-- E-mail: `motorista@viafacil.com`
-- Senha: `motorista123`
-
 ## Funcionalidades
 
 - Cadastro e login com JWT
@@ -56,6 +46,8 @@ Motorista:
 - Perfil público de cada motorista, reunindo seus percursos disponíveis
 - Configuração de foto, título profissional, apresentação, região atendida e meios de pagamento
 - Avaliações e comentários de passageiros com reserva confirmada
+- Upload e compactação da foto do perfil do motorista
+- Painel com a lista de viagens publicadas pelo motorista
 - Pagamento combinado diretamente entre passageiro e motorista, sem intermediação financeira da Via Fácil
 
 ## Configuração de produção no Render
