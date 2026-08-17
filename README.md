@@ -50,6 +50,8 @@ Motorista:
 - Painel administrativo com indicadores
 - Identidade visual oficial da VIA FÁCIL
 - Layout responsivo
+- Mapa interativo dos percursos
+- Busca de endereços, cálculo de rota, distância e duração estimada
 
 ## Configuração de produção no Render
 
@@ -61,8 +63,13 @@ Crie um PostgreSQL no mesmo workspace e região do serviço web. No serviço `vi
 - `ADMIN_EMAIL`: e-mail inicial do administrador
 - `ADMIN_PASSWORD`: senha inicial forte, com pelo menos 8 caracteres
 - `ADMIN_NAME`: nome do administrador (opcional)
+- `MAP_CONTACT_EMAIL`: contato técnico enviado ao serviço de geocodificação
+- `GEOCODING_URL`: servidor Nominatim compatível (opcional)
+- `ROUTING_URL`: servidor OSRM compatível (opcional)
 
 Na primeira inicialização, a aplicação cria a tabela necessária e cadastra o administrador definido pelas variáveis. As contas demonstrativas só são criadas no desenvolvimento local.
+
+O MVP usa OpenStreetMap/Leaflet, Nominatim e OSRM. Os servidores públicos são adequados somente para validação com baixo volume. Antes de ampliar o número de usuários, configure provedores próprios ou comerciais compatíveis por meio de `GEOCODING_URL` e `ROUTING_URL`.
 
 ## Observação
 
