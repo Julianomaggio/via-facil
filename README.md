@@ -53,6 +53,10 @@ Motorista:
 - Mapa interativo dos percursos
 - Busca de endereços, cálculo de rota, distância e duração estimada
 - Seleção explícita de cidade e estado quando existem locais com o mesmo nome
+- Perfil público de cada motorista, reunindo seus percursos disponíveis
+- Configuração de foto, título profissional, apresentação, região atendida e meios de pagamento
+- Avaliações e comentários de passageiros com reserva confirmada
+- Pagamento combinado diretamente entre passageiro e motorista, sem intermediação financeira da Via Fácil
 
 ## Configuração de produção no Render
 
@@ -74,4 +78,4 @@ O MVP usa OpenStreetMap/Leaflet, Nominatim e OSRM. Os servidores públicos são 
 
 ## Observação
 
-Antes de abrir o serviço ao público, adicione recuperação de senha, confirmação de e-mail/telefone, pagamentos, mapas, notificações, backups e políticas de privacidade/LGPD.
+Antes de abrir o serviço ao público, adicione recuperação de senha, confirmação de e-mail/telefone, notificações, backups, termos de uso e políticas de privacidade/LGPD. A integração de assinaturas para os motoristas permanece planejada para uma próxima etapa.
