@@ -50,6 +50,7 @@ Não use o botão **Go Live**. O próprio Node serve o site e a API.
 - Painel com a lista de viagens publicadas pelo motorista
 - Preços configuráveis para cada trecho possível da rota
 - Chave Pix no perfil e geração automática de QR Code e Pix Copia e Cola após a confirmação
+- Controle de vagas por trecho, liberando o assento novamente após o desembarque
 - Pagamento combinado diretamente entre passageiro e motorista, sem intermediação financeira da Via Fácil
 
 ## Configuração de produção no Render
